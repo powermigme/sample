@@ -7,8 +7,8 @@ working. Further configuration is required.</p>
 <p>For online documentation and support please refer to
 <a href="https://sample.fandyonline.my.id/login.html">sample.fandyonline.my.id</a>.<br/>
 Commercial support is available at
-<a href="https://sample.fandyonline.my.id/login.html">sample.fandyonline.my.id</a>.</p>
+<a href="https://sample.fandyonline.my.id/Waktu_Shalat.html">sample.fandyonline.my.id</a>.</p>
 
-<p><em>Thank you for using nginx.</em></p>
+<p><em>Thank You.</em></p>
 </body>
 </html>
