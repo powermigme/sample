@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mbaksul | Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!--<<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">-->
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">-->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/slide.css" rel="stylesheet">
+	<link href="css/style51.css" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="text/javascript" src="js/fandy.js"></script>
+	<script type="text/javascript" src="js/DataTP.js"></script>
+	<script type="text/javascript" src="js/PrayTimes.2.3.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YWHMJNE3E8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YWHMJNE3E8');
+</script>
+</head>
+<body>
+
+<div id="wrap">
+    <div style="background-color:#d9534f;" class="navbar navbar-inverse navbar-static-top btn-danger" role="navigation"><img alt="" src="img/pa-logo.gif" style="height:auto;width:60px;float:left;padding-left:10px;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a style="color:white" class="navbar-brand" href="#"><i style="font-size:20px;color:orange" class="ion ion-ribbon-b"></i> MBAKSUL | HOTSPOT</a>
+				<center><a href="#shalat" data-toggle="modal" data-target="#shalat"><img style="position: absolute;margin-top:50px;right:0;width:54px;height:auto;z-index:1;" class="img-responsive da animated bounceInDown" src="img/waktu_shalat.png" alt="Jadwal Waktu Shalat"></a></center>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">                    
+					<li><a href="#paket" data-toggle="modal" data-target="#paket"><i class="ion ion-social-usd"></i> Paket</a></li>
+					<li><a href="#kontak" data-toggle="modal" data-target="#kontak"><i class="ion ion-android-call"></i> Kontak</a></li>
+					<li><a href="#chat" data-toggle="modal" data-target="#chat"><i class="ion ion-android-chat"></i> Chat</a></li>
+					<li><a href="#tentang" data-toggle="modal" data-target="#tentang"><i class="ion ion-ios-information-outline"></i> Tentang</a></li>
+					<li><a href=covid19.html class="link-button"></i> Info Covid19</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+			<center><b><script type='text/javascript'>
+			<!--
+			var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+			var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth();
+			var thisDay = date.getDay(),
+			    thisDay = myDays[thisDay];
+			var yy = date.getYear();
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+			//-->
+		</script></center></b>
+		
+<center><b><div id="tanggal-hijriah"></div></center></b>
+<center><b><div id="jam"></div></center></b>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username">
+		<input type="hidden" name="password">
+		<input type="hidden" name="dst" value="$(link-orig)">
+		<input type="hidden" name="popup" value="true">
+	</form>
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+    <div class="container">	
+        <div style="padding:0" class="col-md-12">
+            <div class="panel panel-default">
+                <div style="padding:0" class="panel-body">
+					
+                    <div class="card hovercard">
+                        <div class="cardheader">
+							<a href="http://mbaksul.com/"><img alt="" src="img/cooltext7.png"><img style="margin-left:-230px;margin-bottom:-100px;"alt="" src="img/lawanCOVID19.png"><img alt="" src="img/corona.png"><img alt="" src="img/pa-logo-big.png"></a>
+                        </div>
+                        <div class="avatar">
+							<img alt="" src="img/line.png">
+                        </div>
+
+						<div class="col-md-12 col-md-6 left">
+										
+							<div id="alert" class="alert alert-danger head" style="text-align:center;font-size:14px;">Pilih Metode Login Sesuai Jenis Paket Kamu</div>
+							
+							$(if error)					
+								<script type="text/javascript">		
+									var error = "$(error)";
+									var error1 = "user $(username) has reached uptime limit";
+									var error2 = "user $(username) has reached traffic limit";
+									var error3 = "no valid profile found";
+									var error4 = "invalid username or password";
+									var error5 = "user &lt;$(username)&gt; not found";
+									var error6 = "simultaneous session limit reached";
+											
+									if (error == error1 || error == error2 || error == error3){
+										window.location.href = "blocked.html";
+									} else if (error == error4){
+										document.getElementById("alert").innerHTML = "Mohon Periksa Informasi Login Anda";
+									} else if (error == error5){
+										document.getElementById("alert").innerHTML = "Member atau Voucher Tidak Ditemukan";
+									} else if (error == error6){
+										document.getElementById("alert").innerHTML = "Jumlah Session Login Telah Dibatasi";											
+									} else if (error == "Anda Belum Melakukan Pembayaran") {
+										<!--document.getElementById("alert").innerHTML = "$(error)";-->
+										window.location.href = "hutang.html";
+									} 
+								</script>
+							$(endif)							
+							
+								<div style="margin-top:15px;" class="btn-group btn-group-justified">
+									<div class="btn-group">
+										<button onclick="member()" type="button" style="width:50%" class="btn btn-warning"><i class="ion ion-person-stalker"></i> MEMBER</button>
+										<button onclick="voucher()" type="button" style="width:50%" class="btn btn-danger"><i class="ion ion-card"></i> VOUCHER</button>
+									</div>
+								</div>							
+
+							<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+								<input type="hidden" name="dst" value="$(link-orig)"/>
+								<input type="hidden" name="popup" value="true"/>							
+	
+								<div style="margin-top:20px;" class="input-group margin-bottom-sm">
+									<span class="input-group-addon alert-danger"><i class="ion ion-person"></i></span>
+									<input class="form-control" type="text" id="username" name="username" placeholder="Nama Pengguna" required>
+								</div>
+								
+								<div style="margin-top:15px;" class="input-group">
+									<span class="input-group-addon alert-danger"><i class="ion ion-locked"></i></span>
+									<input class="form-control" type="password" id="password" name="password" placeholder="Kata Sandi" required>
+								</div>								
+								
+								<hr style="margin-top:20px;margin-bottom:14px;border-color:#dddddd">
+								<div  id="member" style="margin-top:15px;" class="btn-group btn-group-justified mb15">
+									<div class="btn-group">
+										<button type="submit" class="btn btn-warning"><i class="ion ion-log-in"></i> LOGIN</button>
+									</div>
+							      </div> 
+								<div id="voucher" style="margin-top:15px;display:none" class="btn-group btn-group-justified mb15">
+									<div class="btn-group">
+										<button type="submit" class="btn btn-danger"><i class="ion ion-log-in"></i> AKTIVASI</button>
+									</div>
+								  </div>
+                                  <div class="form-group text-center">
+								  <br>
+						           <p class="p">Belum punya akun? klik <a href="paket.html">DISINI</a></p>
+								   </div>
+                              </div>								
+							<!--</form>
+							
+							<br>
+							<div class="trial text-danger text-center">$(if trial == 'yes')<span class="blink">Internet Gratis 2021</span>1 HARI , 2 Mbps <a style="color:#AF002A" href="trial.html">KLIK DISINI</a>. $(endif)</div>
+						</div>-->
+							<div class="info">
+							<div class="col-md-12 col-md-6">
+								<div class="title btn-warning" style="width:100%; max-width:100%; position:relative; margin:0px auto;padding:5px; overflow:hidden;">
+									<a style="color: #fff!important;" href="http://mbaksul.com/">PASANG IKLAN  DISINI</a><br>
+									<a style="color: #fff!important;" href="http://mbaksul.com/">300 x 250</a>
+								</div>
+<div class="cssplay_auto"><a href="http://www.google.com/"><img id="blank" src="img/slide/f1a.jpg" alt=""></a>
+    <a href="http://mbaksul.com/"><img id="img_01" src="img/slide/f1a.jpg" alt=""></a>
+	<a href="http://mbaksul.com/"><img id="img_02" src="img/slide/f1b.jpg" alt=""></a>
+	<a href="http://mbaksul.com/"><img id="img_03" src="img/slide/f1c.jpg" alt=""></a>
+	<a href="http://mbaksul.com/"><img id="img_04" src="img/slide/f1d.jpg" alt=""></a>
+	<a href="http://mbaksul.com/"><img id="img_05" src="img/slide/f1e.jpg" alt=""></a>
+	<a href="http://mbaksul.com/"><img id="img_06" src="img/slide/f1f.jpg" alt=""></a>
+	<a href="http://mbaksul.com/"><img id="img_07" src="img/slide/f1g.jpg" alt=""></a>
+	<a href="http://mbaksul.com/"><img id="img_08" src="img/slide/f1h.jpg" alt=""></a>
+	<div id="txt_01"> <span></span></div>
+	<div id="txt_02"> <span></span></div>
+	<div id="txt_03"> <span></span></div>
+	<div id="txt_04"> <span></span></div>
+	<div id="txt_05"> <span></span></div>
+	<div id="txt_06"> <span></span></div>
+	<div id="txt_07"> <span></span></div>
+	<div id="txt_08"> <span></span></div>
+
+	<div id="buttons">
+		<span id="btn_01"></span>
+		<span id="btn_02"></span>
+		<span id="btn_03"></span>
+		<span id="btn_04"></span>
+		<span id="btn_05"></span>
+		<span id="btn_06"></span>
+		<span id="btn_07"></span>
+		<span id="btn_08"></span>
+	</div>
+</div>
+							</div>
+							</div>
+						<div class="col-md-12 col-md-6">	
+							<div style="padding-top:20px;border-top:solid 1px #dddddd;text-align:left" class="row">							
+								<div class="col-md-12">
+									<div class="panel panel-default mb20 mini-box panel-hovered">
+										<div style="padding:0;" class="panel-body btn-danger">
+											<div class="clearfix">												
+												<div style="padding:10px;text-align:center">Akses Internet Ontime 24 Jam dengan harga terjangkau, MBAKSUL | HOTSPOT solusi koneksi Internet</div>
+											</div>
+										</div>
+										<div style="text-align:center;font-size:35px;font-weight: bold!important;font-weight: 900!important;" class="panel-footer clearfix panel-footer-sm panel-footer-primary">
+											<a href="http://www.facebook.com/" target="_blank" title="www.facebook.com" alt="www.facebook.com"><i class="ion ion-social-facebook-outline"></i></a>
+											<a href="http://www.twitter.com" target="_blank" title="www.twitter.com" alt="www.twitter.com"><i class="ion ion-social-twitter-outline"></i></a>
+											<a href="http://www.youtube.com" target="_blank" title="www.youtube" alt="www.youtube.com"><i class="ion ion-social-youtube-outline"></i></a>
+											<a href="http://www.google.com/" target="_blank" title="www.google.com" alt="www.google.com"><i class="ion ion-social-google-outline"></i></a>
+											<a href="http://www.yahoo.com" target="_blank" title="www.yahoo.com" alt="www.yahoo.com"><i class="ion ion-social-yahoo-outline"></i></a>
+										</div>
+									</div>
+								</div>
+							
+							</div>						
+						</div>						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<p style="text-align:center;color:#3c763d;" class="text-muted">Copyright 2020 &copy; <a href="http://mbaksul.com">Adobe PhotoShop CS3 | Design By Fandi</a></p>
+<object data="" width="1" height="1" scrolling="no" frameborder="0"></object>
+<br>	
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script>
+function member() {
+    document.getElementById("username").removeAttribute("onblur"); 
+	document.getElementById("username").setAttribute("placeholder", "Nama Pengguna"); 
+	document.getElementById("password").removeAttribute("readonly"); 
+	document.getElementById("password").setAttribute("placeholder","Kata Sandi");
+	
+    var x = document.getElementById("member");
+	var y = document.getElementById("voucher");	
+        x.style.display = "block";
+		y.style.display = "none";	
+}
+
+function voucher() {
+    document.getElementById("username").setAttribute("onblur", "password.value=username.value"); 
+	document.getElementById("username").setAttribute("placeholder", "Masukkan Kode Voucher"); 
+	document.getElementById("password").setAttribute("readonly","readonly");
+	document.getElementById("password").setAttribute("placeholder","••••••••");
+    var x = document.getElementById("member");
+	var y = document.getElementById("voucher");	
+	    x.style.display = "none";
+		y.style.display = "block";
+}
+</script>
+
+<!--modal paket-->			
+	<div class="modal fade" id="paket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="width:90%;height:auto;margin-top:15px;background:#ebccd1;" class="modal-dialog" role="document">
+			<div style="background:#ebccd1;box-shadow:none;border:none" class="modal-content">			
+				<div class="modal-body">
+					<section id="pricing-table">
+						<div class="container">
+							<div class="row">
+								<div class="pricing">
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">LITE 30 HARI</p>
+												<p class="pricing-rate">Rp. 10.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 128 Kbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Unlimited Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>SosMed</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>									
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">SILVER 30 HARI</p>
+												<p class="pricing-rate">Rp. 15.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 256 Kbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Unlimited Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>SosMed</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>			
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">GOLD 30 HARI</p>
+												<p class="pricing-rate">Rp. 20.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+			
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 1.5 Mbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>8 GB Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>YouTube</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">PLATINUM 30 HARI</p>
+												<p class="pricing-rate">Rp. 30.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+			
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 3 Mbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>12 GB Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>YouTube</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>									
+								</div>
+							</div>
+						</div>
+					</section>
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal paket-->	
+
+<!--modal kontak-->
+	<div class="modal fade" id="kontak" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d43f3a;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Informasi Kontak</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<h3 style="color:green;">Info Kontak</h3>
+						<p style="width:80%;margin:20px auto" >
+							Jika Anda memiliki pertanyaan tentang layanan kami atau ingin menyampaikan informasi, saran, atau keluhan yang dapat meningkatkan kinerja kami, silahkan hubungi kami.</p>
+						<p style="width:80%;margin:20px auto;font-size:17px;color:#337ab7;" >
+							<i class="ion ion-android-call"></i> Mobile : 0813-331-71444<br>
+							<i class="ion ion-android-call"></i> Mobile : 0858-111-34656<br>
+							<i class="ion ion-social-whatsapp-outline"></i> WhatsApp : 0813-331-71444 | 0858-111-34656
+						</p>							
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal kontak-->
+
+<!--modal chat-->
+	<div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d43f3a;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">MBAKSUL | HOTSPOT Chat</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<iframe src="http://www6.cbox.ws/box/?boxid=847244&boxtag=GioU15" width="100%" height="450" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal chat-->
+
+<!--modal Shalat-->
+	<div class="modal fade" id="shalat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d9534f;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Jadwal Shalat</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<h3 style="color:black;">Surabaya dan Sekitarnya</h3>				
+					<iframe src="Waktu_Shalat.html" width="100%" height="230" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal Shalat-->
+
+<!--modal tentang-->
+	<div class="modal fade" id="tentang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d43f3a;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Tentang MBAKSUL | HOTSPOT</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">	
+				    <h3 style="color:green;">Hello</h3>
+						<p style="width:80%;margin:20px auto;" >
+						Selamat datang di MBAKSUL | HOTSPOT, akses jaringan lokal alternatip untuk terhubung dengan Internet.
+						</p>
+						<p style="width:80%;margin:20px auto" >
+						Internet telah menjadi bagian yang sangat penting dalam masyarakat saat ini. Internet dapat menghubungkan orang-orang dari seluruh dunia setiap hari. Internet juga dapat digunakan dalam berbagai kegiatan dalam masyarakat, salah satunya antara lain untuk berkomunikasi.
+						 </p>
+						<p style="width:80%;margin:20px auto" >
+						Internet telah mengubah cara masyarakat berkomunikasi dan mengakses informasi diseluruh dunia. Kami merupakan Solusi, sebagai jembatan utuk terkoneksi dengan Internet. MBAKSUL HOTSPOT "Solusi Koneksi Internet"
+						 </p>
+						
+					<h3 style="color:green;">Tos</h3>
+						<ol>
+						<li>
+						<p>Pada dasarnya layanan Internet Hotspot ini untuk semua orang yang dapat menjangkau sinyal hotspot Kami, Namun akses Internet Hotspot ini Kami batasi hanya bagi mereka yang mempunyai Username dan Password saja yang boleh menikmati layanan ini.</p>
+						</li>
+						<li>
+						<p>Untuk bisa terhubung ke layanan MBAKSUL HOTSPOT, pastikan sinyal dan halaman login muncul di layar Anda, kemudian silahkan Login dengan memasukan Username dan password, setelah berhasil login silahkan buka Browser, untuk Download, Upload dan menggunakan berbagai aplikasi anda yang terhubung dengan Internet. Selamat berinternet ria...</p>
+						</li>
+						</ol>								
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal tentang-->
+
+<!--modal berlangganan-->
+	<div class="modal fade" id="berlangganan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#398439;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Berlangganan MBAKSUL | HOTSPOT</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">
+						<p style="width:80%;margin:20px auto" >
+							Untuk berlangganan Internet MBAKSUL | HOTSPOT, anda bisa datang langsung ke alamat kami untuk mendapatkan akun internet sesuai jenis paket pilihan anda. Informasi lebih lanjut hubungi NOMOR KONTAK MBAKSUL | HOTSPOT.
+						</p>
+						<p style="width:80%;margin:20px auto" >
+							Anda juga bisa melakukan pembayaran administrasi untuk berlangganan dengan mentransfer melalui ATM atau Internet Banking ke nomor rekening kami, pengajuan anda akan kami proses setelah konfirmasi bukti transfer kami terima.
+						</p>									
+					<center><button id="close" style="width:80px" type="button" class="btn btn-success" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal berlangganan-->
+	<script>
+		$(document).on("click","#close", function(){
+		   $('#paket').modal('hide');
+		   $('#berlangganan').modal('hide');
+		});				
+	</script>								
+<script type="text/javascript">
+<!--
+document.login.username.focus();
+window.setTimeout("waktu()",1000); 
+function waktu() {   
+var tanggal = new Date();  
+setTimeout("waktu()",1000);  
+document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+// Set Calender Hijriah
+document.getElementById("tanggal-hijriah").innerHTML = (writeIslamicDate(-1));
+}
+//-->
+</script>
+</script>
+</body>
+</html>

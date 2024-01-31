@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jadwal Waktu Shalat</title>
+	<script type='text/javascript' src='js/PrayTimes.2.3.js'></script>
+	<script src='js/DataTP.js' type='text/javascript'></script>
+<style>
+  body {
+   margin:0;
+   padding:0;
+  }
+	#timetable {border-width: 1px; border-style: outset; border-collapse: collapse; border-color: #349749!important; width:100%!important;margin-bottom:10px;}
+	#timetable td, #timetable th {border-width: 1px; border-spacing: 1px; padding: 2px 4px; border-style: inset; border-color: #349749;}
+	#timetable th {color:black; text-align: center; font-weight: bold; background-color: #00FF00;}
+</style>
+  </head>
+  <body>
+<form action="" method="post" name="form1" id="form1">
+<select id="pilihan_kota" onchange="show()" style="width:100%!important;margin:0;padding:5px 5px 5px 3px; color:#303030; font-family:sans-serif; font-size:13px;border:none;border-bottom:1px solid #afbbc5;background:#CCCCFF;">
+<option value="1" />Abepura
+<option value="2" />Ambarawa
+<option value="3" />Ambon
+<option value="4" />Atambua
+<option value="5" />Babat
+<option value="6" />Balikpapan
+<option value="7" />Banda Aceh
+<option value="8" />Bandar Lampung
+<option value="9" />Bandung
+<option value="10" />Bangkalan
+<option value="11" />Banjarmasin
+<option value="12" />Bantul
+<option value="13" />Banyumas
+<option value="14" />Banyuwangi
+<option value="15" />Batam
+<option value="16" />Bekasi
+<option value="17" />Bengkulu
+<option value="18" />Biak
+<option value="19" />Bima
+<option value="20" />Binjai
+<option value="21" />Bireun
+<option value="22" />Blitar
+<option value="23" />Blora
+<option value="24" />Bogor
+<option value="25" />Bojonegoro
+<option value="26" />Bojong Gede
+<option value="27" />Bondowoso
+<option value="28" />Bone
+<option value="29" />Bontang
+<option value="30" />Boyolali
+<option value="31" />Brebes
+<option value="32" />Buaran
+<option value="33" />Bukit Tinggi
+<option value="34" />Bumiayu
+<option value="35" />Cepu
+<option value="36" />Cianjur
+<option value="37" />Cikarang
+<option value="38" />Cilacap
+<option value="39" />Cilegon
+<option value="40" />Cirebon
+<option value="41" />Demak
+<option value="42" />Denpasar
+<option value="43" />Depok
+<option value="44" />Dumai
+<option value="45" />Ende
+<option value="46" />Garut
+<option value="47" />Gombong
+<option value="48" />Gorontalo
+<option value="49" />Gresik
+<option value="50" />Indramayu
+<option value="51" />Jakarta
+<option value="52" />Jambi
+<option value="53" />Jayapura
+<option value="54" />Jember
+<option value="55" />Jepara
+<option value="56" />Karangasem
+<option value="57" />Kebumen
+<option value="58" />Kediri
+<option value="59" />Kendari
+<option value="60" />Klaten
+<option value="61" />Kualakapuas
+<option value="62" />Kuala Simpang
+<option value="63" />Kudus
+<option value="64" />Kuta
+<option value="65" />Lamongan
+<option value="66" />Langsa
+<option value="67" />Lhokseumawe
+<option value="68" />Lubuk Linggau
+<option value="69" />Lumajang
+<option value="70" />Madiun
+<option value="71" />Magelang
+<option value="72" />Magetan
+<option value="73" />Majalengka
+<option value="74" />Makassar
+<option value="75" />Malang
+<option value="76" />Manado
+<option value="77" />Manokwari
+<option value="78" />Martapura
+<option value="79" />Mataram
+<option value="80" />Maumere
+<option value="81" />Medan
+<option value="82" />Merauke
+<option value="83" />Meulaboh
+<option value="84" />Mojokerto
+<option value="85" />Nabire
+<option value="86" />Nganjuk
+<option value="87" />Padang
+<option value="88" />Palangka Raya
+<option value="89" />Palembang
+<option value="90" />Palu
+<option value="91" />Pamekasan
+<option value="92" />Pandaan
+<option value="93" />Pangkal Pinang
+<option value="94" />Pasuruan
+<option value="95" />Pekanbaru
+<option value="96" />Pematang Siantar
+<option value="97" />Polewali
+<option value="98" />Ponorogo
+<option value="99" />Pontianak
+<option value="100" />Poso
+<option value="101" />Prigen
+<option value="102" />Probolinggo
+<option value="103" />Sabang
+<option value="104" />Samarinda
+<option value="105" />Sampang
+<option value="106" />Sampit
+<option value="107" />Semarang
+<option value="108" />Serang
+<option value="109" />Sibolga
+<option value="110" />Sigli
+<option value="111" />Singkawang
+<option value="112" />Situbondo
+<option value="113" selected />Surabaya
+<option value="114" />Surakarta
+<option value="115" />Tabanan
+<option value="116" />Tangerang
+<option value="117" />Tarakan
+<option value="118" />Tasikmalaya
+<option value="119" />Ternate
+<option value="120" />Tidore
+<option value="121" />Trenggalek
+<option value="122" />Tuban
+<option value="123" />Ubud
+<option value="124" />Ungaran
+<option value="125" />Waingapu
+<option value="126" />Wonosobo
+<option value="127" />Yogyakarta
+</select>
+</form>
+<div id="table"></div>
+<script type="text/javascript">
+	window.onload=function(){show()}
+</script>
+  </body>
+</html>

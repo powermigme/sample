@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="ImageToolbar" content="No">
+<meta name="MSSmartTagsPreventParsing" content="True">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="Cache-Control" content="No-Cache,Must-Revalidate,No-Store">
+<meta name="Robots" content="NoIndex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>MBAKSUL | Status</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <!-- <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"> -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/slide.css" rel="stylesheet">
+	<script type="text/javascript" src="js/DataTP.js"></script>
+	<script type="text/javascript" src="js/PrayTimes.2.3.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+    <div style="background-color:#d9534f;" class="navbar navbar-inverse navbar-static-top btn-success" role="navigation"><img alt="" src="img/pa-logo.gif" style="height: auto;width: 60px;float:left;padding-left:10px;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a style="color:white" class="navbar-brand" href="#"><i style="font-size:20px;color:orange" class="ion ion-ribbon-b"></i> MBAKSUL | HOTSPOT</a>
+				<center><a href="#shalat" data-toggle="modal" data-target="#shalat"><img style="position: absolute;margin-top:50px;right:0;width:54px;height:auto;z-index:1;" class="img-responsive da animated bounceInDown" src="img/waktu_shalat.png" alt="Jadwal Waktu Shalat"></a></center>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+					<li><a href="#paket" data-toggle="modal" data-target="#paket"><i class="ion ion-social-usd"></i> Paket</a></li>
+					<li><a href="#kontak" data-toggle="modal" data-target="#kontak"><i class="ion ion-android-call"></i> Kontak</a></li>
+					<li><a href="#chat" data-toggle="modal" data-target="#chat"><i class="ion ion-android-chat"></i> Chat</a></li>
+					<li><a href="#tentang" data-toggle="modal" data-target="#tentang"><i class="ion ion-ios-information-outline"></i> Tentang</a></li>
+					<li><a href=covid19.html class="link-button"></i> Info Covid19</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">	
+        <div style="padding:0" class="col-md-12">
+            <div class="panel panel-default">
+                <div style="padding:0" class="panel-body alert-danger">
+
+                    <div class="card hovercard">
+                        <div class="cardheader">
+							<img alt="" src="img/pa-logo-big.png">
+                        </div>
+                        <div class="avatar">
+							<img alt="" src="img/line.png">
+                        </div>
+						
+						<div class="col-md-12 col-md-6 left">
+						$(if login-by == 'trial')
+						<div class="alert alert-success head" style="text-align:center;font-size:14px;border-radius:0">Hai! FREE USER, Selamat Datang di MBAKSUL - HOTSPOT</div>
+						$(elif login-by != 'mac')
+						<div class="alert alert-success head" style="text-align:center;font-size:14px;border-radius:0">Hai! $(username), Selamat Datang di MBAKSUL - HOTSPOT</div>
+						$(endif)
+								<div class="panel panel-default">
+									<div style="text-align:left" class="panel-body">						
+										<table class="table table-striped">
+											<tbody><tr class="active"><td align="right">IP Address:</td><td>$(ip)</td></tr>
+											<tr class="warning"><td align="right">MAC Address:</td><td>$(mac)</td></tr>
+											<tr class="active"><td align="right">Aktif:</td><td>$(uptime) </td></tr>
+											<tr class="warning"><td align="right">Sisa Waktu:</td><td><span id="SisaWaktu"></span></td></tr>
+											<tr class="active"><td align="right">Sisa Kuota:</td><td>$(remain-bytes-total-nice)</td></tr>
+											<tr class="warning"><td align="right">Up/Down:</td><td>$(bytes-in-nice)/$(bytes-out-nice)</td></tr>
+											<tr class="active"><td align="right">Online:</td><td><script src="on.js"></script></td></tr>
+											<!-- <tr class="warning"><td align="left">Expired:</td><td><iframe style="width: 100% id="exp" frameborder="0" scrolling="no" src="about:blank"></iframe></td></tr>-->
+											</tbody>
+										</table>
+										<form id="loginForm" class="form-horizontal" role="form" action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+											<div style="margin-top:15px;" class="btn-group btn-group-justified mb15">
+												<div class="btn-group">
+													<button type="submit" class="btn btn-danger"><i class="ion ion-log-out"></i> LOGOUT</button>
+												</div>
+											</div>
+										</form>											
+									</div>				
+								</div>								
+							<br>
+						</div>
+							<div class="info">
+							<div class="col-md-12 col-md-6">
+								<div class="title btn-warning" style="width:100%; max-width:100%; position:relative; margin:0px auto; padding:5px;overflow:hidden;">
+									<a style="color: #fff!important;" href="http://mbaksul.com/">PASANG IKLAN  DISINI</a><br>
+									<a style="color: #fff!important;" href="http://mbaksul.com/">448x224</a>
+								</div>
+<div class="cssplay_auto"><img id="blank" src="img/slide/f1a.jpg" alt="">
+    <img id="img_01" src="img/slide/f1a.jpg" alt="">
+	<img id="img_02" src="img/slide/f1b.jpg" alt="">
+	<img id="img_03" src="img/slide/f1c.jpg" alt="">
+	<img id="img_04" src="img/slide/f1d.jpg" alt="">
+	<img id="img_05" src="img/slide/f1e.jpg" alt="">
+	<img id="img_06" src="img/slide/f1f.jpg" alt="">
+	<img id="img_07" src="img/slide/f1g.jpg" alt="">
+	<img id="img_08" src="img/slide/f1h.jpg" alt="">
+	<div id="txt_01"> <span></span></div>
+	<div id="txt_02"> <span></span></div>
+	<div id="txt_03"> <span></span></div>
+	<div id="txt_04"> <span></span></div>
+	<div id="txt_05"> <span></span></div>
+	<div id="txt_06"> <span></span></div>
+	<div id="txt_07"> <span></span></div>
+	<div id="txt_08"> <span></span></div>
+
+	<div id="buttons">
+		<span id="btn_01"></span>
+		<span id="btn_02"></span>
+		<span id="btn_03"></span>
+		<span id="btn_04"></span>
+		<span id="btn_05"></span>
+		<span id="btn_06"></span>
+		<span id="btn_07"></span>
+		<span id="btn_08"></span>
+	</div>
+</div>
+							</div>
+							</div>
+						<div class="col-md-12 col-md-6">	
+							<div style="padding-top:20px;border-top:solid 1px #dddddd;text-align:left" class="row">							
+								<div class="col-md-12">
+									<div class="panel panel-default mb20 mini-box panel-hovered">
+										<div style="padding:0;background-color:#d9534f;color:#fff" class="panel-body alert-danger">
+											<div class="clearfix">												
+												<div style="padding:10px;text-align:center">Akses Internet Ontime 24 Jam dengan harga terjangkau, MBAKSUL | HOTSPOT solusi koneksi Internet.</div>
+											</div>
+										</div>
+										<div style="text-align:center;font-size:35px;font-weight: bold!important;font-weight: 900!important;" class="panel-footer clearfix panel-footer-sm panel-footer-primary">
+											<a href="http://www.facebook.com/" target="_blank" title="www.facebook.com" alt="www.facebook.com"><i class="ion ion-social-facebook-outline"></i></a>
+											<a href="http://www.twitter.com/" target="_blank" title="www.twitter.com" alt="www.twitter.com"><i class="ion ion-social-twitter-outline"></i></a>
+											<a href="http://www.youtube.com" target="_blank" title="www.youtube" alt="www.youtube.com"><i class="ion ion-social-youtube-outline"></i></a>
+											<a href="http://google.com/" target="_blank" title="www.google.com" alt="www.google.com"><i class="ion ion-social-google-outline"></i></a>
+											<a href="http://yahoo.com/" target="_blank" title="www.yahoo.com" alt="www.yahoo.com"><i class="ion ion-social-yahoo-outline"></i></a>
+										</div>
+									</div>
+								</div>
+							
+							</div>						
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<p style="text-align:center;color:#3c763d;" class="text-muted">Copyright 2020 &copy; <a href="http://mbaksul.com/">Adobe PhotoShop CS3 | Design By Fandi</a></p>	
+<br>	
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!--modal paket-->			
+	<div class="modal fade" id="paket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="width:90%;height:auto;margin-top:15px;background:#ebccd1;" class="modal-dialog" role="document">
+			<div style="background:#ebccd1;box-shadow:none;border:none" class="modal-content">			
+				<div class="modal-body">
+					<section id="pricing-table">
+						<div class="container">
+							<div class="row">
+								<div class="pricing">
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">LITE 30 HARI</p>
+												<p class="pricing-rate">Rp. 5.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 128 Kbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Unlimited Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>SosMed</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>									
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">SILVER 30 HARI</p>
+												<p class="pricing-rate">Rp. 10.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 256 Mbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Unlimited Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>SosMed</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>			
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">GOLD 30 HARI</p>
+												<p class="pricing-rate">Rp. 15.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+			
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 1.5 Mbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>8 GB Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>YouTube</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-12 col-xs-12">
+										<div class="pricing-table">
+											<div class="pricing-header">
+												<p class="pricing-title">PLATINUM 30 HARI</p>
+												<p class="pricing-rate">Rp. 20.000</p>
+												<a class="btn btn-custom" href="paket.html">More ></a>
+											</div>
+			
+											<div class="pricing-list">
+												<ul>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Up To 3 Mbps</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>12 GB Quota</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>YouTube</li>
+													<li><i style="font-size:18px;color:#555555" class="ion ion-android-checkbox-outline"></i>Aktif 30 Hari</li>
+												</ul>
+											</div>
+										</div>
+									</div>									
+								</div>
+							</div>
+						</div>
+					</section>
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal paket-->	
+
+<!--modal kontak-->
+	<div class="modal fade" id="kontak" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d43f3a;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Informasi Kontak</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<h3 style="color:green;">Info Kontak</h3>
+						<p style="width:80%;margin:20px auto" >
+							Jika Anda memiliki pertanyaan tentang layanan kami atau ingin menyampaikan informasi, saran, atau keluhan yang dapat meningkatkan kinerja kami, silahkan hubungi kami.</p>
+						<p style="width:80%;margin:20px auto;font-size:17px;color:#337ab7;" >
+							<i class="ion ion-android-call"></i> Mobile : 0813-331-71444<br>
+							<i class="ion ion-android-call"></i> Mobile : 0858-111-34656<br>
+							<i class="ion ion-social-whatsapp-outline"></i> WhatsApp : 0813-331-71444 | 0858-111-34656
+						</p>							
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal kontak-->
+
+<!--modal chat-->
+	<div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d43f3a;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">MBAKSUL | HOTSPOT Chat</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<iframe src="https://www6.cbox.ws/box/?boxid=847244&boxtag=GioU15" width="100%" height="450" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal chat-->
+
+<!--modal Shalat-->
+	<div class="modal fade" id="shalat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d9534f;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Jadwal Shalat</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<h3 style="color:black;">Surabaya dan Sekitarnya</h3>				
+					<iframe src="Waktu_Shalat.html" width="100%" height="230" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal Shalat-->
+
+<!--modal tentang-->
+	<div class="modal fade" id="tentang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#d43f3a;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Tentang MBAKSUL | HOTSPOT</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">	
+				    <h3 style="color:green;">Assalaamu' alaikum</h3>
+						<p style="width:80%;margin:20px auto;" >
+						Selamat datang di MBAKSUL | HOTSPOT, akses jaringan lokal alternatip untuk terhubung dengan Internet.
+						</p>
+						<p style="width:80%;margin:20px auto" >
+						Internet telah menjadi bagian yang sangat penting dalam masyarakat saat ini. Internet dapat menghubungkan orang-orang dari seluruh dunia setiap hari. Internet juga dapat digunakan dalam berbagai kegiatan dalam masyarakat, salah satunya antara lain untuk berkomunikasi.
+						 </p>
+						<p style="width:80%;margin:20px auto" >
+						Internet telah mengubah cara masyarakat berkomunikasi dan mengakses informasi diseluruh dunia. Kami merupakan Solusi, sebagai jembatan utuk terkoneksi dengan Internet. MBAKSUL HOTSPOT "Solusi Koneksi Internet"
+						 </p>
+						
+					<h3 style="color:green;">Tos</h3>
+						<ol>
+						<li>
+						<p>Pada dasarnya layanan Internet Hotspot ini Gratis untuk semua orang yang dapat menjangkau sinyal hotspot Kami, namun karena alasan keamanan dan kenyamanan, maka akses Internet Hotspot Gratis ini Kami batasi hanya bagi mereka yang mempunyai Username dan Password saja yang boleh menikmati layanan ini.</p>
+						</li>
+						<li>
+						<p>Untuk bisa terhubung ke layanan MBAKSUL HOTSPOT, pastikan sinyal dan halaman login muncul di layar Anda, kemudian silahkan Login dengan memasukan Username dan password, setelah berhasil login silahkan buka Browser, untuk Download, Upload dan menggunakan berbagai aplikasi anda yang terhubung dengan Internet. Selamat berinternet ria...</p>
+						</li>
+						</ol>								
+					<center><button style="width:80px" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal tentang-->
+
+<!--modal berlangganan-->
+	<div class="modal fade" id="berlangganan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#398439;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Berlangganan MBAKSUL | HOTSPOT</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">
+						<p style="width:80%;margin:20px auto" >
+							Untuk berlangganan Internet MBAKSUL | HOTSPOT, anda bisa datang langsung ke alamat kami untuk mendapatkan akun internet sesuai jenis paket pilihan anda. Informasi lebih lanjut hubungi NOMOR KONTAK $(identity)
+						</p>
+						<p style="width:80%;margin:20px auto" >
+							Anda juga bisa melakukan pembayaran administrasi untuk berlangganan dengan mentransfer melalui ATM atau Internet Banking ke nomor rekening kami, pengajuan anda akan kami proses setelah konfirmasi bukti transfer kami terima.
+						</p>									
+					<center><button id="close" style="width:80px" type="button" class="btn btn-success" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--modal berlangganan-->
+	<script>
+		$(document).on("click","#close", function(){
+		   $('#paket').modal('hide');
+		   $('#berlangganan').modal('hide');
+		});				
+	</script>
+	<script type="text/javascript">
+	//get vaidity
+    var usr = document.getElementById('user').innerHTML
+    var url = "http://mbaksul.rf.gd/status/status.php?name="; // http://ip-server-mikhmon/mikhmonv2/status/status.php?name=
+    var SessionName = "mbaksul"
+    var getvalid = url+usr+"&session="+SessionName
+    document.getElementById('exp').src = getvalid;
+</script>
+<script>
+var time = "$(session-time-left)";
+time = time.replace(/w/g,'w ').replace(/d/g,'d ').replace(/h/g,'h ').replace(/m/g,'m ').replace(/s/g,'s ');
+waktu = time.replace(/w /g,'Minggu').replace(/d /g,'Hari').replace(/h /g,'Jam').replace(/m /g,'Menit').replace(/s /g,'Detik');
+sisawaktu = waktu.replace(/Minggu/g,'Minggu ').replace(/Hari/g,'Hari ').replace(/Jam/g,'Jam ').replace(/Menit/g,'Menit ').replace(/Detik/g,'Detik ');
+
+document.getElementById("SisaWaktu").innerHTML = sisawaktu;  
+</script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Mbaksul Hotspot</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta http-equiv="pragma" content="no-cache" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="height=device-height, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/PrayTimes.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<style>
+@media only screen and (max-width: 360px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+table, thead, tbody, th, td, tr {font-size: 11px}
+#timetable td, #timetable th {padding: 5px;}
+tr {margin: 0;}}
+@media screen and (max-width: 220px) {
+.onoff {margin:-35px 5px 5px 5px;}}
+</style>
+</head>
+<body>
+<div id="wrap" class="wrap">
+<div class="box">
+<center><img src="img/logo1.png" style="margin-top: -9px;width: 200px;" /></center>
+<marquee scrolldelay="200">SELAMAT DATANG DI INTERNET TANPA BATAS UNTUK BROWSING DOWNLOAD & GAMING SUPER CEPAT </marquee>
+</div>
+<div class="line1"></div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+	.corona-alert {
+	  padding: 1px;
+	  background-color: #031b4e;
+	  color: white;
+	}
+	
+	.corona-closebtn {
+	  margin-left: 10px;
+	  color: white;
+	  font-weight: bold;
+	  float: right;
+	  font-size: 22px;
+	  line-height: 20px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	}
+	
+	.corona-closebtn:hover {
+	  color: black;
+	}
+	
+	.corona-bg-primary{
+	background-color:#007bff!important;
+	padding: 5px;
+	border-radius: 6px;
+	margin-right: 5px;
+	}
+	
+	.corona-bg-success{
+	background-color:#28a745!important;
+	padding: 5px;
+	border-radius: 6px;
+	margin-right: 5px;
+	}
+	
+	.corona-bg-danger{
+	background-color:#dc3545!important;
+	padding: 5px;
+	border-radius: 6px;
+	margin-right: 5px;
+	}
+	
+	.corona-label{display:inline-block;
+	margin-bottom:.5rem;
+	}
+	
+	.corona-blink{display:inline-flex;width:20px;justify-content:center;}
+	.corona-blink01{width:14px;height:14px;background-color:red;border-radius:50%;}
+	.corona-blink02{-webkit-animation:blinking 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;animation:blinking 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;}
+	::-webkit-input-placeholder{color:#888;}
+	:-moz-placeholder{color:#888;}
+	::-moz-placeholder{color:#888;}
+	:-ms-input-placeholder{color:#888;}
+	@media only screen and (max-width: 100px){
+	.header .corona-blink{width:10px;}
+	.header .corona-blink .corona-blink01{width:10px;height:10px;}
+	}
+	@-webkit-keyframes blinking{from{opacity:1;}to{opacity:0;}}
+	@keyframes blinking{from{opacity:1;}to{opacity:0;}}
+	
+</style>
+</head>
+<body>
+
+<script>
+var date = new Date();
+var tahun = date.getFullYear();
+var bulan = date.getMonth();
+var tanggal = date.getDate();
+switch(bulan) {
+ case 0: bulan = "Januari"; break;
+ case 1: bulan = "Februari"; break;
+ case 2: bulan = "Maret"; break;
+ case 3: bulan = "April"; break;
+ case 4: bulan = "Mei"; break;
+ case 5: bulan = "Juni"; break;
+ case 6: bulan = "Juli"; break;
+ case 7: bulan = "Agustus"; break;
+ case 8: bulan = "September"; break;
+ case 9: bulan = "Oktober"; break;
+ case 10: bulan = "November"; break;
+ case 11: bulan = "Desember"; break;
+}
+var infoTanggal = tanggal + "/" + bulan + "/" + tahun;
+
+// Daftar API Lainnya
+// https://covid19.mathdro.id/api/countries/ID
+// https://api.kawalcorona.com/indonesia/
+
+let url = 'https://coronavirus-19-api.herokuapp.com/countries/Indonesia';
+fetch(url)
+.then(res => res.json())
+.then((out) => {
+document.getElementById("corona-positif").innerHTML = 'Positif : ' + out.cases;
+document.getElementById("corona-positiftoday").innerHTML = 'Hari ini : ' + out.todayCases;
+document.getElementById("corona-positifaktif").innerHTML = 'Aktif : ' + out.active;
+document.getElementById("corona-meninggal").innerHTML = 'Meninggal : ' + out.deaths;
+document.getElementById("corona-meninggaltoday").innerHTML = 'Hari ini : ' + out.todayDeaths;
+document.getElementById("corona-sembuh").innerHTML = 'Sembuh : ' + out.recovered;
+})
+.catch(err => { throw err });
+
+</script>
+<div class="corona-alert">
+	<span class="corona-closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	<div style="font-size:20px; color:red; text-align:center;" class="blink">
+             INFO TERKINI!!
+		</div>
+	<strong id="corona-info">Informasi Covid-19 di Indonesia <script>document.write(infoTanggal);</script> <span class="corona-blink"><i class="corona-blink01 corona-blink02"></i></span>LIVE</strong>&nbsp;
+	<br><br>
+	<label id="corona-positif" class="corona-label corona-bg-primary"></label>
+	<label id="corona-positiftoday" class="corona-label corona-bg-primary"></label>
+	<label id="corona-positifaktif" class="corona-label corona-bg-primary"></label>
+	<label id="corona-meninggal" class="corona-label corona-bg-danger"></label>
+	<label id="corona-meninggaltoday" class="corona-label corona-bg-danger"></label>
+	<label id="corona-sembuh" class="corona-label corona-bg-success"></label>
+	<marquee scrolldelay="150">#Tips menghindari coronaVirus. 1. Cuci tangan dengan benar 2. Gunakan masker 3. Jaga daya tahan tubuh 4. Jangan pergi ke tempat keramaian umum</marquee>
+</div>
+<div class="table">
+  <script language="JavaScript">
+
+//if (document.all)
+{
+var dest=document.getElementById(destination);
+if (dest)// && dest.innerHTML)
+{
+dest.innerHTML=text.substr(0, currentChar)+"<blink></blink>";
+currentChar++;
+if (currentChar>text.length)
+{
+currentChar=1;
+setTimeout("type()", 5000);
+}
+else
+{
+setTimeout("type()", delay);
+}
+}
+}
+}
+function startTyping(textParam, delayParam, destinationParam)
+{
+text=textParam;
+delay=delayParam;
+currentChar=1;
+destination=destinationParam;
+type();
+}
+</script> <b><div 0px="" 12px="" arial="" color:="" ff0000="" font:="" id="textDestination" margin:="" style="background-color: none;"></div></b> <script language="JavaScript">
+javascript:startTyping(text, 50, "textDestination");
+</script>
+<center><a href=login.html class="link-button"><button>KEMBALI</a><center>
+</div>
+</script>
+</script>
+</body>
+</html>
